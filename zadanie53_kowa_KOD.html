@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <textarea id="textarea" name="textarea" rows="60" cols="80">
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var a_kow = prompt("Podaj szerokość prostokąta a:");
+            var b_kow = prompt("Podaj wysokość prostokąta b:");
+
+            var gwiazdki_g = "*";
+            for (var i = 1; i < a_kow; i++) {
+                gwiazdki_g += "*";
+            }
+
+            var gwiazdki_sr = "*";
+            for (var i = 1; i < a_kow - 1; i++) {
+                gwiazdki_sr += "&nbsp;&nbsp;";
+            }
+            gwiazdki_sr += "*";
+
+            var gwiazdki_d = "*";
+            for (var i = 1; i < a_kow; i++) {
+                gwiazdki_d += "*";
+            }
+
+            document.write(gwiazdki_g + "<br>");
+
+            for (var i = 1; i < b_kow - 1; i++) {
+                document.write(gwiazdki_sr + "<br>");
+            }
+
+            document.write(gwiazdki_d + "<br>");
+
+        </script>
+    </body>
+</html>
+<!--Olivier Kowalski 3G-->
+</textarea>
+  </body>
+</html>

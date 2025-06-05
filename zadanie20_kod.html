@@ -1,0 +1,52 @@
+<textarea>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie20</title>
+    <script>
+        function AB_kow() {
+            var xa = parseFloat(document.getElementById('xa_kow').value);
+            var xb = parseFloat(document.getElementById('xb_kow').value);
+            var ya = parseFloat(document.getElementById('ya_kow').value);
+            var yb = parseFloat(document.getElementById('yb_kow').value);
+            var dlugoscAB = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+            document.getElementById('dlugoscAB').innerText = "Długość AB: " + dlugoscAB.toFixed(2) + " cm";
+        }
+
+        function BC_kow() {
+            var xb = parseFloat(document.getElementById('xb_kow').value);
+            var xc = parseFloat(document.getElementById('xc_kow').value);
+            var yb = parseFloat(document.getElementById('yb_kow').value);
+            var yc = parseFloat(document.getElementById('yc_kow').value);
+            var dlugoscBC = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+            document.getElementById('dlugoscBC').innerText = "Długość BC: " + dlugoscBC.toFixed(2) + " cm";
+        }
+
+        function AC_kow() {
+            var xa = parseFloat(document.getElementById('xa_kow').value);
+            var xc = parseFloat(document.getElementById('xc_kow').value);
+            var ya = parseFloat(document.getElementById('ya_kow').value);
+            var yc = parseFloat(document.getElementById('yc_kow').value);
+            var dlugoscAC = Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+            document.getElementById('dlugoscAC').innerText = "Długość AC: " + dlugoscAC.toFixed(2) + " cm";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    <input type="number" id="xa_kow" placeholder="xa"> xa cm<br>
+    <input type="number" id="ya_kow" placeholder="ya"> ya cm<br>
+    <input type="number" id="xb_kow" placeholder="xb"> xb cm<br>
+    <input type="number" id="yb_kow" placeholder="yb"> yb cm<br>
+    <input type="number" id="xc_kow" placeholder="xc"> xc cm<br>
+    <input type="number" id="yc_kow" placeholder="yc"> yc cm<br>
+    <input type="button" value="Oblicz długości boków" onclick="AB_kow(); BC_kow(); AC_kow();"><br><br>
+    <div id="dlugoscAB"></div>
+    <div id="dlugoscBC"></div>
+    <div id="dlugoscAC"></div>
+</body>
+
+</html>

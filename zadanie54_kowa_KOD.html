@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <textarea id="textarea" name="textarea" rows="60" cols="80">
+<html>
+<body>
+<script>
+let b = prompt("napisz nazwisko");
+let a = prompt("napisz imie");
+
+let aa = a.length;
+let bb = b.length;
+
+let a_kow = (aa % 4) + 5;
+let b_kow = (bb % 6) + 20;
+
+document.write("a = " + a_kow + "<br>");
+document.write("b = " + b_kow + "<br><br>");
+for (let i = 0; i < a_kow; i++) {
+    let row = '';
+    for (let j = 0; j < b_kow; j++) {
+        if (i === 0 || i === a_kow - 1) {
+            row += '*';
+        } else {
+            if (j === 0 || j === b_kow - 1) {
+                row += '*';
+            } else {
+                row += '&nbsp;&nbsp;';
+            }
+        }
+    }
+	document.write(row + "<br>");
+}
+
+</script>
+</body>
+</html>
+<!--Olivier Kowalski 3G-->
+</textarea>
+  </body>
+</html>
